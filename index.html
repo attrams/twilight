@@ -10,14 +10,14 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
+        <!-- custom css -->
+        <link rel="stylesheet" href="./css/style.css">
+
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&display=swap"
             rel="stylesheet">
-
-        <!-- custom css -->
-        <link rel="stylesheet" href="./css/style.css">
 
         <!-- preload images -->
         <link rel="preload" as="image" href="./images/hero-slider-1.jpg">
@@ -25,7 +25,7 @@
         <link rel="preload" as="image" href="./images/hero-slider-3.jpg">
     </head>
 
-    <body>
+    <body style="display: none;">
 
         <!-- preloader -->
         <div class="preload" id="preload">
@@ -174,6 +174,103 @@
                 <div class="overlay nav-toggler" id="overlay"></div>
             </div>
         </header>
+
+        <main>
+            <article>
+                <!-- hero -->
+                <section class="hero text-center" id="home" aria-label="home">
+                    <ul class="hero-slider" id="hero-slider">
+                        <li class="slider-item active hero-slider-item">
+                            <div class="slider-bg">
+                                <img src="./images/hero-slider-1.jpg" alt="hero_image" class="img-cover" width="1880"
+                                    height="950">
+                            </div>
+
+                            <p class="label-2 section-subtitle slider-reveal">
+                                Traditional & Hygiene
+                            </p>
+
+                            <h1 class="display-1 hero-title slider-reveal">
+                                For the love of <br> delicious food
+                            </h1>
+
+                            <p class="body-2 hero-text slider-reveal">
+                                Come with family & feel the joy of mouthwatering food
+                            </p>
+
+                            <a href="#" class="btn btn-primary slider-reveal">
+                                <span class="text text-1">View Our Menu</span>
+
+                                <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                            </a>
+                        </li>
+
+                        <li class="slider-item hero-slider-item">
+                            <div class="slider-bg">
+                                <img src="./images/hero-slider-2.jpg" alt="hero_image" class="img-cover" width="1880"
+                                    height="950">
+                            </div>
+
+                            <p class="label-2 section-subtitle slider-reveal">
+                                Delightful experience
+                            </p>
+
+                            <h1 class="display-1 hero-title slider-reveal">
+                                Flavors inspired by <br> the seasons
+                            </h1>
+
+                            <p class="body-2 hero-text slider-reveal">
+                                Come with family & feel the joy of mouthwatering food
+                            </p>
+
+                            <a href="#" class="btn btn-primary slider-reveal">
+                                <span class="text text-1">View Our Menu</span>
+
+                                <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                            </a>
+                        </li>
+
+                        <li class="slider-item hero-slider-item">
+                            <div class="slider-bg">
+                                <img src="./images/hero-slider-3.jpg" alt="hero_image" class="img-cover" width="1880"
+                                    height="950">
+                            </div>
+
+                            <p class="label-2 section-subtitle slider-reveal">
+                                Amazing & delicious
+                            </p>
+
+                            <h1 class="display-1 hero-title slider-reveal">
+                                Where every flavor <br> tells a story
+                            </h1>
+
+                            <p class="body-2 hero-text slider-reveal">
+                                Come with family & feel the joy of mouthwatering food
+                            </p>
+
+                            <a href="#" class="btn btn-primary slider-reveal">
+                                <span class="text text-1">View Our Menu</span>
+
+                                <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <button class="slider-btn prev" aria-label="slide to previous" id="prev-btn">
+                        <ion-icon name="chevron-back"></ion-icon>
+                    </button>
+
+                    <button class="slider-btn next" aria-label="slide to next" id="next-btn">
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </button>
+
+                    <a href="#" class="hero-btn has-after">
+                        <img src="./images/hero-icon.png" height="48" width="48" alt="booking icon">
+                        <span class="label-2 text-center span">Book A Table</span>
+                    </a>
+                </section>
+            </article>
+        </main>
 
         <!-- custom js -->
         <script src="./js/script.js" defer></script>

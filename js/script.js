@@ -1,5 +1,10 @@
 'use strict';
 
+// remove style from body
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.removeAttribute('style');
+});
+
 // preloading ends after document is loaded
 const preloader = document.getElementById('preload');
 
@@ -54,3 +59,51 @@ window.addEventListener('scroll', function () {
     header.classList.remove('active');
   }
 });
+
+/* 
+  hero slider 
+*/
+const heroSlider = document.getElementById('hero-slider');
+const heroSliderItems = document.querySelectorAll('.hero-slider-item');
+const heroSliderPrevBtn = document.getElementById('prev-btn');
+const heroSliderNextBtn = document.getElementById('next-btn');
+
+let currentSlidePosition = 0;
+let lastActiveSliderItem = heroSliderItems[0];
+let slideInterval;
+
+const resetInterval = function () {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(slideNext, 15000);
+};
+
+const updateSliderPosition = function () {
+  lastActiveSliderItem.classList.remove('active');
+  heroSliderItems[currentSlidePosition].classList.add('active');
+  lastActiveSliderItem = heroSliderItems[currentSlidePosition];
+};
+
+// next button
+const slideNext = function () {
+  currentSlidePosition = (currentSlidePosition + 1) % heroSliderItems.length;
+
+  updateSliderPosition();
+  resetInterval();
+};
+
+heroSliderNextBtn.addEventListener('click', slideNext);
+
+// previous button
+const slidePrev = function () {
+  currentSlidePosition =
+    (currentSlidePosition - 1 + heroSliderItems.length) %
+    heroSliderItems.length;
+
+  updateSliderPosition();
+  resetInterval();
+};
+
+heroSliderPrevBtn.addEventListener('click', slidePrev);
+
+// auto slide
+slideInterval = setInterval(slideNext, 15000);
