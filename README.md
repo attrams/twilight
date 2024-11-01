@@ -27,5 +27,11 @@
     </p>    
     <p>
         <a href="https://unsplash.com/photos/pasta-with-meat-on-white-ceramic-plate-FIGcCVQeGwE" target="_blank">Waakye</a>
+    </p>    
+    <p>
+        <a href="https://unsplash.com/photos/photo-of-pub-set-in-room-during-daytime-poI7DelFiVA" target="_blank">Restaurant</a>
+    </p>    
+    <p>
+        <a href="https://unsplash.com/photos/man-holding-menu-a5ToDH34m0I" target="_blank">Restaurant in Japan</a>
     </p>
 </div>
