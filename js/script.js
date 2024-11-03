@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.removeAttribute('style');
 });
 
+/* Preloader */
 // preloading ends after document is loaded
 const preloader = document.getElementById('preload');
 
@@ -15,6 +16,7 @@ window.addEventListener('load', function () {
   }, 1000);
 });
 
+/* Navbar */
 // function to add event listener to elements
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0; i < elements.length; i++) {
@@ -26,14 +28,51 @@ const addEventOnElements = function (elements, eventType, callback) {
 const navbar = document.getElementById('navbar');
 const navTogglers = document.getElementsByClassName('nav-toggler');
 const overlay = document.getElementById('overlay');
+const navLinks = document.querySelectorAll('.navbar-link');
 
+// Toggle navbar and overlay visibility
 const toggleNavbar = function () {
   navbar.classList.toggle('active');
   overlay.classList.toggle('active');
   document.body.classList.toggle('nav-active');
+
+  // Hide the navbar if it's being closed
+  if (!navbar.classList.contains('active')) {
+    hideNavbar();
+  }
 };
 
 addEventOnElements(navTogglers, 'click', toggleNavbar);
+
+// Function to hide navbar and overlay
+const hideNavbar = function () {
+  navbar.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.classList.remove('nav-active');
+};
+
+// Function to handle navigation link clicks
+const handleNavLinkClick = function (e) {
+  if (this.hash) {
+    e.preventDefault(); // Prevent default anchor behavior
+    const targetId = this.hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView(); // Scroll to target section
+      // Remove the hash from the URL
+      history.replaceState(
+        null,
+        '',
+        window.location.pathname + window.location.search
+      );
+    }
+    // Hide the navbar after clicking a link
+    hideNavbar();
+  }
+};
+
+addEventOnElements(navLinks, 'click', handleNavLinkClick);
 
 // hide header when window is scrolled
 const header = document.getElementById('header');
