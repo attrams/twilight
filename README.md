@@ -34,8 +34,11 @@
     </p>
     <p>
         <a href="https://www.instagram.com/shogunghana/p/CyVt7tOOjBa/?hl=en" target="_blank">Cocktail</a>
+    </p>    
+    <p>
+        <a href="https://www.instagram.com/shogunghana/p/DByGA0LvsVY/?hl=en" target="_blank">Testimonial Image</a>
     </p>
-        <h3>Buka Restaurant - Accra</h3>
+    <h3>Buka Restaurant - Accra</h3>
     <p>
         <a href="https://www.instagram.com/thebukarestaurant/p/C9excmwCf4h/?hl=en&img_index=1" target="_blank">Tatale and Aboboi</a>
     </p>    

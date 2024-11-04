@@ -46,12 +46,12 @@
   --fontSize-title-2: 2.2rem;
   --fontSize-title-3: 2.1rem;
   --fontSize-title-4: calc(1.6rem + 1.2vw);
-  --fontSize-body-1: 2.3rem;
-  --fontSize-body-2: 1.5rem;
-  --fontSize-body-3: 1.7rem;
-  --fontSize-body-4: 1.5rem;
-  --fontSize-label-1: 1.3rem;
-  --fontSize-label-2: 1.1rem;
+  --fontSize-body-1: 2.4rem;
+  --fontSize-body-2: 1.6rem;
+  --fontSize-body-3: 1.8rem;
+  --fontSize-body-4: 1.6rem;
+  --fontSize-label-1: 1.4rem;
+  --fontSize-label-2: 1.2rem;
 
   /* font-weight */
   --weight-regular: 400;
@@ -482,6 +482,12 @@ body.nav-active {
   50% {
     transform: translateY(30px);
   }
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* preloader */
@@ -1147,4 +1153,40 @@ body.nav-active {
 .menu .shape-3 {
   bottom: 0;
   right: 0;
+}
+
+/* testimonial */
+.testi {
+  padding-block-end: 340px;
+  position: static;
+}
+
+.testi .quote {
+  font-size: 7rem;
+  font-family: var(--fontFamily-forum);
+  line-height: 0.9em;
+}
+
+.testi .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-block: 40px 50px;
+}
+
+.testi .seperator {
+  animation: rotate360 16s linear infinite;
+}
+
+.profile .img {
+  margin-inline: auto;
+  border-radius: var(--radius-circle);
+  margin-block-end: 16px;
+}
+
+.testi .profile-name {
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-3);
 }
