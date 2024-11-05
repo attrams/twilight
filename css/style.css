@@ -543,6 +543,23 @@ body.nav-active {
   right: 10px;
 }
 
+button:disabled {
+  color: var(--quick-silver);
+  background-color: var(--black);
+  cursor: not-allowed;
+}
+
+button:disabled .text-2 {
+  color: var(--quick-silver);
+  background-color: var(--black);
+}
+
+button:disabled:hover {
+  color: var(--quick-silver);
+  background-color: var(--black);
+  transform: none;
+}
+
 /* preloader */
 .preload {
   position: fixed;
@@ -1248,6 +1265,7 @@ body.nav-active {
 .input-field[type='date'] {
   padding-right: 6px;
   text-transform: uppercase;
+  -webkit-appearance: none;
 }
 
 ::-webkit-calendar-picker-indicator {

@@ -573,7 +573,7 @@
                 </section>
 
                 <!-- Reservation -->
-                <section class="reservation" id="contact">
+                <section class="reservation">
                     <div class="container">
                         <div class="form reservation-form bg-black-10">
                             <form action="" class="form-left" id="reservation">
@@ -583,18 +583,18 @@
                                 </p>
 
                                 <div class="input-wrapper">
-                                    <input type="text" name="reservation-person-name" autocomplete="off" class="input-field" placeholder="Fullname" required>
+                                    <input type="text" name="reservation-person-fullname" id="reservation-person-fullname" autocomplete="off" class="input-field" placeholder="Fullname" required>
 
-                                    <input type="tel" name="reservation-person-phone-number" autocomplete="off" class="input-field" placeholder="Phone Number" required>
+                                    <input type="tel" id="reservation-person-phone-number" name="reservation-person-phone-number" autocomplete="off" class="input-field" placeholder="Phone Number" required>
                                 </div>
 
-                                <input type="email" name="reservation-person-email" autocomplete="off" class="input-field" placeholder="Email Address" required>
+                                <input type="email" id="reservation-person-email" name="reservation-person-email" autocomplete="off" class="input-field" placeholder="Email Address" required>
 
                                 <div class="input-wrapper">
                                     <div class="icon-wrapper">
                                         <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
-                                        <select name="reservation-person" class="input-field" required>
+                                        <select name="number-of-people" id="number-of-people" class="input-field" required>
                                             <option value="1-person" selected>1 Person</option>
                                             <option value="2-person">2 Person</option>
                                             <option value="3-person">3 Person</option>
@@ -608,12 +608,12 @@
                                         <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                                     </div>
 
-                                    <input type="date" name="reservation-date" class="input-field" required>
+                                    <input type="date" id="reservation-date" name="reservation-date" class="input-field" required>
 
                                     <div class="icon-wrapper">
                                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                                        <select name="reservation-time" class="input-field" required>
+                                        <select name="reservation-time" id="reservation-time" class="input-field" required>
                                             <option value="10:00am" selected>10 : 00am</option>
                                             <option value="11:00am">11 : 00am</option>
                                             <option value="12:00pm">12 : 00pm</option>
@@ -627,7 +627,7 @@
                                     </div>
                                 </div>
 
-                                <textarea name="message" class="input-field" placeholder="Message" autocomplete="off" required></textarea>
+                                <textarea name="message" id="message" class="input-field" placeholder="Message (What you would like to order)" autocomplete="off" required></textarea>
 
                                 <button type="submit" class="btn btn-secondary">
                                     <span class="text text-1">Book A Table</span>
@@ -635,7 +635,7 @@
                                 </button>
                             </form>
 
-                            <div class="form-right text-center" style="background-image: url('./images/form-pattern.png');">
+                            <div class="form-right text-center" style="background-image: url('./images/form-pattern.png');" id="contact">
                                 <h2 class="headline-1 text-center">
                                     Contact US
                                 </h2>
@@ -678,6 +678,10 @@
         <!-- ionicons link -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <!-- emailjs link -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
     </body>
 
 </html>

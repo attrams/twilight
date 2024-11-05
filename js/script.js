@@ -232,3 +232,79 @@ viewAllMenu.addEventListener('click', function (e) {
     });
   }
 });
+
+/* send email */
+
+emailjs.init({
+  publicKey: 'YVQs5uWrOwfI1bSOw',
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per 10s
+    throttle: 10000,
+  },
+});
+
+document
+  .getElementById('reservation')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Disable the submit button to prevent multiple submissions
+    const submitButton = document.querySelector('button[type="submit"]');
+    const spanElements = document.querySelectorAll('form .text');
+    submitButton.disabled = true;
+
+    spanElements.forEach(function (spanElement) {
+      spanElement.textContent = 'Sending...';
+    });
+
+    const fullname = document.getElementById(
+      'reservation-person-fullname'
+    ).value;
+    const phone = document.getElementById(
+      'reservation-person-phone-number'
+    ).value;
+    const email = document.getElementById('reservation-person-email').value;
+    const numberOfPeople = document.getElementById('number-of-people').value;
+    const date = document.getElementById('reservation-date').value;
+    const time = document.getElementById('reservation-time').value;
+    const message = document.getElementById('message').value;
+
+    const reservationInfo = {
+      fullname: fullname,
+      phone: phone,
+      recipient: email,
+      number_of_people: numberOfPeople,
+      date: date,
+      time: time,
+      message: message,
+    };
+
+    // send email
+    emailjs.send('service_2xvvy7s', 'template_2ymwhus', reservationInfo).then(
+      function (res) {
+        // On success, show a confirmation and reset the form
+        alert('Reservation confirmed! Check your inbox.');
+
+        // Reset the form fields
+        document.getElementById('reservation').reset();
+
+        // Re-enable the submit button and restore original text
+        submitButton.disabled = false;
+        spanElements.forEach(function (spanElement) {
+          spanElement.textContent = 'Book A Table';
+        });
+      },
+      function (err) {
+        // On error, show an error message and re-enable the button
+        alert('Failed to send reservation email. Please try again');
+
+        // Re-enable the submit button and restore original text
+        submitButton.disabled = false;
+        spanElements.forEach(function (spanElement) {
+          spanElement.textContent = 'Book A Table';
+        });
+      }
+    );
+  });
