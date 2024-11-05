@@ -48,7 +48,7 @@
                     </span>
                 </address>
 
-                <div class="seperator"></div>
+                <div class="separator"></div>
 
                 <div class="topbar-item item-2">
                     <div class="icon">
@@ -56,7 +56,7 @@
                     </div>
 
                     <span class="span">
-                        Daily : 8:00 am to 10:00 pm
+                        Daily : 8:00 am to 8:00 pm
                     </span>
                 </div>
 
@@ -70,7 +70,7 @@
                     </span>
                 </a>
 
-                <div class="seperator"></div>
+                <div class="separator"></div>
 
                 <a href="mailto:booking@twilight.com" class="topbar-item">
                     <div class="icon">
@@ -103,35 +103,35 @@
                     <ul class="navbar-list">
                         <li class="navbar-item">
                             <a href="#home" class="navbar-link hover-underline">
-                                <div class="seperator"></div>
+                                <div class="separator"></div>
                                 <span class="span">Home</span>
                             </a>
                         </li>
 
                         <li class="navbar-item">
                             <a href="#menu" class="navbar-link hover-underline">
-                                <div class="seperator"></div>
+                                <div class="separator"></div>
                                 <span class="span">Menus</span>
                             </a>
                         </li>
 
                         <li class="navbar-item">
                             <a href="#about-us" class="navbar-link hover-underline">
-                                <div class="seperator"></div>
+                                <div class="separator"></div>
                                 <span class="span">About Us</span>
                             </a>
                         </li>
 
                         <li class="navbar-item">
                             <a href="#our-chefs" class="navbar-link hover-underline">
-                                <div class="seperator"></div>
+                                <div class="separator"></div>
                                 <span class="span">Our Chefs</span>
                             </a>
                         </li>
 
                         <li class="navbar-item">
                             <a href="#contact" class="navbar-link hover-underline">
-                                <div class="seperator"></div>
+                                <div class="separator"></div>
                                 <span class="span">Contact</span>
                             </a>
                         </li>
@@ -146,12 +146,12 @@
                         </address>
 
                         <p class="body-4 navbar-text">
-                            Daily : 8:00 am to 10:00 pm
+                            Daily : 8:00 am to 8:00 pm
                         </p>
 
                         <a href="mailto:booking@twilight.com" class="body-4 sidebar-link">booking@twilight.com</a>
 
-                        <div class="seperator"></div>
+                        <div class="separator"></div>
 
                         <p class="contact-label">Booking Request</p>
 
@@ -263,7 +263,7 @@
                         <ion-icon name="chevron-forward"></ion-icon>
                     </button>
 
-                    <a href="#" class="hero-btn has-after">
+                    <a href="#reservation" class="hero-btn has-after">
                         <img src="./images/hero-icon.png" height="48" width="48" alt="booking icon">
                         <span class="label-2 text-center span">Book A Table</span>
                     </a>
@@ -538,7 +538,7 @@
                         </ul>
 
                         <p class="menu-text text-center">
-                            Daily : <span class="span">8:00 am</span> to <span class="span">10:00 pm</span>
+                            Daily : <span class="span">8:00 am</span> to <span class="span">8:00 pm</span>
                         </p>
 
                         <a href="#" id="view-all-menu" class="btn btn-primary">
@@ -559,15 +559,113 @@
                         <p class="headline-2 testi-text">Listen up, you culinary enthusiasts! If you want to experience flavor explosions that'll make your taste buds sing like a dying star, then you need to hit this restaurant. The food here is like a portal gun for your mouth—totally mind-blowing! Trust me, I've traveled across dimensions, and this place? It's a culinary miracle in a world of bland mediocrity. So, do yourself a favor and get over here. You won't regret it... unless you're not ready for greatness.</p>
 
                         <div class="wrapper">
-                            <div class="seperator"></div>
-                            <div class="seperator"></div>
-                            <div class="seperator"></div>
+                            <div class="separator"></div>
+                            <div class="separator"></div>
+                            <div class="separator"></div>
                         </div>
 
                         <div class="profile">
                             <img src="./images/testi-avatar.jpg" alt="Rick Sanchez" width="100" height="100" loading="lazy" class="img">
 
                             <p class="label-2 profile-name">Rick Sanchez</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reservation -->
+                <section class="reservation" id="contact">
+                    <div class="container">
+                        <div class="form reservation-form bg-black-10">
+                            <form action="" class="form-left" id="reservation">
+                                <h2 class="headline-1 text-center">Online Reservation</h2>
+                                <p class="form-text text-center">
+                                    Booking request <a href="tel:233244444444" class="link">0244-444-444</a> or fill out the order form
+                                </p>
+
+                                <div class="input-wrapper">
+                                    <input type="text" name="reservation-person-name" autocomplete="off" class="input-field" placeholder="Fullname" required>
+
+                                    <input type="tel" name="reservation-person-phone-number" autocomplete="off" class="input-field" placeholder="Phone Number" required>
+                                </div>
+
+                                <input type="email" name="reservation-person-email" autocomplete="off" class="input-field" placeholder="Email Address" required>
+
+                                <div class="input-wrapper">
+                                    <div class="icon-wrapper">
+                                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                                        <select name="reservation-person" class="input-field" required>
+                                            <option value="1-person" selected>1 Person</option>
+                                            <option value="2-person">2 Person</option>
+                                            <option value="3-person">3 Person</option>
+                                            <option value="4-person">4 Person</option>
+                                            <option value="5-person">5 Person</option>
+                                            <option value="6-person">6 Person</option>
+                                            <option value="7-person">7 Person</option>
+                                            <option value="8-person">8 Person</option>
+                                        </select>
+
+                                        <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                    </div>
+
+                                    <input type="date" name="reservation-date" class="input-field" required>
+
+                                    <div class="icon-wrapper">
+                                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                                        <select name="reservation-time" class="input-field" required>
+                                            <option value="10:00am" selected>10 : 00am</option>
+                                            <option value="11:00am">11 : 00am</option>
+                                            <option value="12:00pm">12 : 00pm</option>
+                                            <option value="01:00pm">01 : 00pm</option>
+                                            <option value="02:00pm">02 : 00pm</option>
+                                            <option value="03:00pm">03 : 00pm</option>
+                                            <option value="04:00pm">04 : 00pm</option>
+                                        </select>
+
+                                        <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                    </div>
+                                </div>
+
+                                <textarea name="message" class="input-field" placeholder="Message" autocomplete="off" required></textarea>
+
+                                <button type="submit" class="btn btn-secondary">
+                                    <span class="text text-1">Book A Table</span>
+                                    <span class="text text-2" aria-hidden="true">Book A Table</span>
+                                </button>
+                            </form>
+
+                            <div class="form-right text-center" style="background-image: url('./images/form-pattern.png');">
+                                <h2 class="headline-1 text-center">
+                                    Contact US
+                                </h2>
+                                <p class="contact-label">
+                                    Booking Request
+                                </p>
+                                <a href="tel:233244444444" class="body-1 contact-number hover-underline">
+                                    0244-444-444
+                                </a>
+
+                                <div class="separator"></div>
+
+                                <p class="contact-label">Location</p>
+                                <address class="body-4">
+                                    4th circular Road, Cantonments, <br>
+                                    Accra, Ghana
+                                </address>
+
+                                <p class="contact-label">Lunch Time</p>
+                                <p class="body-4">
+                                    Daily <br>
+                                    11:00 am - 02:00 pm
+                                </p>
+
+                                <p class="contact-label">Dinner Time</p>
+                                <p class="body-4">
+                                    Monday - Friday <br>
+                                    05:00 pm - 07:00 pm
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
