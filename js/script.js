@@ -1,19 +1,12 @@
 'use strict';
 
-// remove style from body
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.removeAttribute('style');
-});
-
 /* Preloader */
 // preloading ends after document is loaded
 const preloader = document.getElementById('preload');
 
 window.addEventListener('load', function () {
-  this.setTimeout(() => {
-    preloader.classList.add('loaded');
-    this.document.body.classList.add('loaded');
-  }, 1000);
+  preloader.classList.add('loaded');
+  document.body.classList.add('loaded');
 });
 
 /* Navbar */
