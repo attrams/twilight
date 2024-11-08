@@ -195,7 +195,7 @@ viewAllMenu.addEventListener('click', function (e) {
         item.title
       }" loading="lazy" width="100" height="100" class="img-cover" onerror="this.style.display='none'">
           </figure>
-          <div>
+          <div class="card-info">
             <div class="title-wrapper">
               <h3 class="title-3">
                 <a href="#" class="card-title">${item.title}</a>
